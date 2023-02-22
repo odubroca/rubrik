@@ -66,7 +66,7 @@ $vCenterRolePrivIds = @(
 Connect-VIServer -Server $vCenterServer -Username $vCenterUserName -Password $vCenterPassword
 Write-Host -Foreground Green "Creating Rubrik Custom vCenter role: $vCenterRubrikRoleName"
 New-VIRole -Name $vCenterRubrikRoleName -Privilege (Get-VIPrivilege -Id $vCenterRolePrivIds)
-Disconnect-VIServer -Confirm:$true
+Disconnect-VIServer -Confirm:$false
 
 
 
